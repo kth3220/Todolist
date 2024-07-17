@@ -27,7 +27,7 @@ h1 {
     padding: 20px;
 }
 
-#inputField #todoInput {    /* CSS에서 # 기호는 해당 요소가 ID 선택자임을 나타냄*/
+#inputField #todoInput {    /* inputField안에있는 todoInput을 가르키기 때문에 순서를 바꾸면 안됨. CSS에서 # 기호는 해당 요소가 ID 선택자임을 나타냄*/
     width: calc(100% - 45px); /*calc() 함수는 CSS에서 수학적 계산을 수행할 수 있게 함*/
     border: 1px solid #eee;
     border-radius: 4px;
@@ -49,8 +49,8 @@ h1 {
     vertical-align: middle; /*요소를 수직 정렬을 가운데로 함*/
 }
 
-#inputField #addBtn span {/* #inputField와 #addBtn의 자식 요소 span에 적용되는 스타일이고 span 요소는 버튼 안에 있는 작은 막대를 나타냄*/
-    display: block; //*블록 요소는 항상 새로운 줄에서 시작하며, 가로 너비가 가능한 최대 크기를 가짐*/
+#inputField #addBtn span {/* #inputField와 #addBtn의 자식 요소 span에 적용되는 스타일이고 span 요소는 버튼 안에 있는 +를 나타냄*/
+    display: block; /*블록 요소는 항상 새로운 줄에서 시작하며, 가로 너비가 가능한 최대 크기를 가짐*/
     width: 2px;
     height: 15px;
     background-color: #FFE8AD;
