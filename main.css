@@ -3,13 +3,16 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #ffff;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /*플렉스 방향 : 세로*/
+    align-items: center; /*각 줄의 가운데로 정렬*/
     margin: 0;
-    min-height: 100vh;
+    min-height: 100vh;  /*최소높이가 100으로 채워짐*/
 }
+/* 100% 와 100vh 의 차이
+100%는 부모의 영향이 있지만 100vh는 부모의 영향이 없이  100으로 채워지는 것을 의미*/
+
 
 h1 {
     margin: 0;
@@ -24,38 +27,40 @@ h1 {
     padding: 20px;
 }
 
-#inputField #todoInput {
-    width: calc(100% - 45px);
+#inputField #todoInput {    /* CSS에서 # 기호는 해당 요소가 ID 선택자임을 나타냄*/
+    width: calc(100% - 45px); /*calc() 함수는 CSS에서 수학적 계산을 수행할 수 있게 함*/
     border: 1px solid #eee;
     border-radius: 4px;
     padding: 10px;
 }
 
-#inputField #todoInput:focus {
-    outline: none;
+#inputField #todoInput:focus {/*#inputField와 #todoInput ID 선택자에 대해 focus(사용자가 클릭할때) 상태일 때 적용되는 스타일*/
+    outline: none;  /*포커스가 맞춰졌을 때 기본으로 표시되는 외곽선을 없애고 none은 외곽선을 보이지 않게함*/
 }
 
 #inputField #addBtn {
-    position: relative;
+    position: relative; /*요소를 상대적으로 배치할 수 있게 함*/
     width: 35px;
     height: 35px;
     border: none;
     background-color: #242423;
     border-radius: 4px;
-    cursor: pointer;
-    vertical-align: middle;
+    cursor: pointer;    /*마우스의 커서를 요소 위에 올렸을때 포인터(손가락 모양)으로 변경함*/
+    vertical-align: middle; /*요소를 수직 정렬을 가운데로 함*/
 }
 
-#inputField #addBtn span {
-    display: block;
+#inputField #addBtn span {/* #inputField와 #addBtn의 자식 요소 span에 적용되는 스타일이고 span 요소는 버튼 안에 있는 작은 막대를 나타냄*/
+    display: block; //*블록 요소는 항상 새로운 줄에서 시작하며, 가로 너비가 가능한 최대 크기를 가짐*/
     width: 2px;
     height: 15px;
     background-color: #FFE8AD;
-    position: absolute;
-    transform: translate(-50%,-50%);
+    position: absolute;     /*요소를 절대 위치로 배치할 수 있게 함*/
+    transform: translate(-50%,-50%);    /*요소를 자신의 크기의 50%만큼 왼쪽과 위로 이동시켜 중심을 맞추게 변형함*/
     top: 50%;
     left: 50%;
 }
-#inputField #addBtn span:last-child {
-    transform: translate(-50%,-50%) rotate(-90deg);
+#inputField #addBtn span:last-child {   /* #inputField와 #addBtn의 자식 요소 span 중 마지막 요소에만 적용되는 스타일*/
+    transform: translate(-50%,-50%) rotate(-90deg); /* transform: 요소를 변형함
+    translate(-50%, -50%)는 요소를 자신의 크기의 50%만큼 왼쪽과 위로 이동시켜 중심을 맞추고,
+    rotate(-90deg)는 요소를 90도 반시계 방향으로 회전시킴*/
 }
