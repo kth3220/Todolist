@@ -64,3 +64,25 @@ h1 {
     translate(-50%, -50%)는 요소를 자신의 크기의 50%만큼 왼쪽과 위로 이동시켜 중심을 맞추고,
     rotate(-90deg)는 요소를 90도 반시계 방향으로 회전시킴*/
 }
+
+#todoList {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+#todoList li {
+    padding: 10px 0;
+    user-select: none;
+}
+
+#todoList button {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
